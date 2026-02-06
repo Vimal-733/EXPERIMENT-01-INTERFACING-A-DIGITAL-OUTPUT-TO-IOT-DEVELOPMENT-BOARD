@@ -3,11 +3,19 @@
 
 **DATE:**
 
+6.2.2026
+
 **NAME:**
+
+A.VIMAL
 
 **ROLL NO:**
 
+212224240183
+
 **DEPARTMENT:**
+
+AIML
 
 ## Aim
 
@@ -99,10 +107,43 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 ## STM 32 CUBE PROGRAM
 
 ```
-// Your STM 32 CUBE Program code here
+#include "main.h"
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+ 
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+ 
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+	  HAL_Delay(5000);
+	  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+	  HAL_Delay(5000);
+
+
+  }
+}
+
 ```
 
 ## OUTPUT
+
+### RELAY OFF
+
+![11](https://github.com/user-attachments/assets/186bbb8a-9cf0-4272-87ec-91a8f03d8d13)
+
+### RELAY ON
+
+![12](https://github.com/user-attachments/assets/527361af-f381-4282-8f76-bd2d172043fc)
+
 
 ## Result
 
